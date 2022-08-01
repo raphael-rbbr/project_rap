@@ -1,0 +1,128 @@
+.map-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.pets-index {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  flex-grow: 1;
+  text-align: center;
+  grid-gap: 16px;
+  padding: 16px;
+}
+
+.pets-index .list-group-item {
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  height: 350px;
+  padding: 0;
+  text-align: center;
+    p {
+      color: grey;
+      width: 100%;
+      height: 45px;
+      overflow: hidden;
+    }
+    a {
+      bottom: 5%;
+    }
+    h4 {
+      padding-top: 10px;
+      font-size: 100%;
+    }
+}
+
+/*Smallest device*/
+@media (min-width: 100px) and (max-width: 575px) {
+  .pets {
+    grid-template-columns: 1fr;
+  }
+  .map {
+    display: none;
+  }
+}
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+  .pets {
+    grid-template-columns: 1fr 1fr;
+  }
+  .map {
+    display: none;
+  }
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 1200px) {
+  .pets {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .map {
+    display: block;
+  }
+}
+
+.map {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
+
+.pet-card {
+  display: flex;
+  height: 200px;
+  width: 90%;
+  margin: 4%;
+  padding: 2%;
+  background-color: hsl(0, 0%, 98%);
+  background-position: center;
+  background-size: cover;
+  justify-content: center;
+  align-items: flex-end;
+  border-radius: 6px;
+  box-shadow: 2px 2px 3px rgba(128, 128, 128, 0.137);
+}
+
+.new-lists {
+  display: grid;
+  flex-grow: 1;
+  margin: 20px;
+  background-color: hsl(0, 0%, 98%);
+  padding: 5%;
+  box-shadow: 2px 2px 3px rgba(128, 128, 128, 0.137);
+  border-radius: 4px;
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 4%;
+  margin-bottom: 4%;
+}
+
+@media (min-width: 100px) and (max-width: 790px) {
+  .new-lists {
+    grid-template-columns: 1fr;
+    width: 90%;
+    h1 {
+          font-size: 200%;
+    }
+  }
+}
+
+.show-pet-image {
+  border-radius: 50%;
+}
+
+.search-box {
+  display: grid;
+  flex-grow: 1;
+  margin: 20px;
+  background-color: hsl(0, 0%, 98%);
+  padding: 5%;
+  box-shadow: 2px 2px 3px rgba(128, 128, 128, 0.137);
+  border-radius: 4px;
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 4%;
+}
